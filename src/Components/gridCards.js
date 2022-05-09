@@ -8,7 +8,7 @@ import {  Divider } from '@mui/material';
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
     ...theme.typography.body2,
-    padding: theme.spacing(),
+    padding: theme.spacing(2),
     margin: '10px',
     textAlign: 'center',
     color: theme.palette.text.secondary,
@@ -25,23 +25,24 @@ export default function GridCards({ pokemon, id}) {
                 <a>Nro: </a>
                 <span>{`${pokemon.id}`}</span>
                 <Divider></Divider>
-                <Grid item xs="auto">
+                <Grid >
                     <h2>{name}</h2>
                     <img alt={name} src={pokemon.sprites.front_default}></img>
                 </Grid>
-                <a>Type:</a>
-                {pokemon.types.map((types, id) => {
-                    return (
-                        <span key={id}>{types.type.name}</span>
-                    )
-                })}
+                <Grid >
+                    <a>Type:</a>
+                    {pokemon.types.map((types, id) => {
+                        return (
+                            <span key={id}>{types.type.name}</span>
+                        )
+                    })}
+                </Grid>
                 <Divider></Divider>
                 { pokemon.stats.map( (stats, id) => {
-                    const statName = stats.stat.name.toUpperCase()
                     return (
-                        <Grid item xs="auto">
+                        <Grid key={id} item xs="auto">
                             <a>{`${stats.stat.name}: `}</a>
-                            <span>{`${stats.base_stat}`}</span>
+                            <span >{`${stats.base_stat}`}</span>
                         </Grid>
                     )
                 })
