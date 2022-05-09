@@ -15,16 +15,7 @@ async function obtainPokemonsData(urlData) {
         .then(response => {
             return response
         })
-
-
-    // try {
-    //     const res = await fetch(urlData);
-    //     const data = await res.json();
-    //     console.log(data);
-    //     return data;
-    // } catch (err) {
-    //     console.log(err);
-    // }
+        
 }
 
 export {
