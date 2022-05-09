@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
+import { getPokemons, obtainPokemonsData } from './Services/api';
+
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -13,26 +15,45 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const url = 'https://pokeapi.co/api/v2/';
+
 
 function App() {
+  const [pokemons, setPokemons] = useState([])
+  const [loading, setLoading] = useState()
+
+
+  const obtainPokemons = async () => {
+    try {
+      const data = await getPokemons();
+      const response = data.map(async (pokemons) => {
+        return await obtainPokemonsData(pokemons.url)
+      });
+      const results = await Promise.all(response)
+      setPokemons(results)
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  useEffect(() => {
+    obtainPokemons()
+  }, []);
+
   return (
     <div className="App">
       <h1>PokeDex</h1>
       <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={4}>
-        <Grid item xs={4}>
-          <Item>xs=8</Item>
-        </Grid>
-        <Grid item xs={4}>
-          <Item>xs=4</Item>
-        </Grid>
-        <Grid item xs={4}>
-          <Item>xs=4</Item>
-        </Grid>
-        <Grid item xs={8}>
-          <Item>xs=8</Item>
-        </Grid>
+          {pokemons.map((pokemon, id) => {
+            return (
+              <Grid key={id} item xs={4}>
+                <Item>
+                  <span>{pokemon.id}</span>
+                  <span>{pokemon.name}</span>
+                </Item>
+              </Grid>
+            )
+          })}
       </Grid>
     </Box>
     </div>
