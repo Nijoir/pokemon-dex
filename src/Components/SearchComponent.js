@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { Grid } from "@mui/material";
-import { Box, Input, Button } from "@mui/material";
-import { TextField } from "@mui/material";
-import { FormControl } from "@mui/material";
+import { Box, 
+        Button,
+        TextField,
+        FormControl
+        } from "@mui/material";
+
 
 export default function SearchComponent({onSearch}) {
     const [searchName, setSearchName] = useState('')
