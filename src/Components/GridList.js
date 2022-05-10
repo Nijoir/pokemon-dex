@@ -1,6 +1,6 @@
 import React from "react";
 
-import GridCards from './GridCards';
+import GridCards from '../Components/GridCards';
 import { Grid, Pagination, Typography } from "@mui/material";
 
 
