@@ -25,7 +25,7 @@ export default function GridList({ loading,pokemons,page,setPage,totalPages }) {
          : <>
             { pokemons.map((pokemon) => {
                 return (
-                  <GridCards 
+                  <GridCards
                     key={pokemon.id}
                     pokemon={pokemon}
                   />
