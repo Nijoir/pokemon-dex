@@ -29,9 +29,9 @@ function GridList({ loading,pokemons,page,setPage,totalPages }) {
         <Pagination count={totalPages} page={page} onChange={handleChange} />
         </Grid>
         { loading ? 
-        <>
+        
             <a>Buscando Pokemones...</a>
-            </>
+            
          : <>
             { pokemons.map((pokemon) => {
                 return (
