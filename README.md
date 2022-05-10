@@ -43,25 +43,25 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 **Hola aca estara un poco de las decisiones técnicas para el desarrollo de la aplicación**
 
-Bueno comenzando por usar el MUI para ya tener componentes preparados para su implementacion y no estar haciendo uso de demasiado css para los estilos.
+Bueno comenzando por usar el MUI para ya tener componentes preparados para su implementación y no estar haciendo uso de demasiado css para los estilos.
 
 Decidí ir dividiendo los componentes para poder tener un orden entorno a todo lo renderizado, pero al momento de hacer el deploy de la aplicación sucedia un error, este error era que no
 
-obtenia el `modulo` de GridCards.js, siendo que ya esta importado. Dejo la [Imágen](https://prnt.sc/0xmpphvp800m).
+Obtenía el `modulo` de GridCards.js, siendo que ya esta importado. Dejo la [Imágen](https://prnt.sc/0xmpphvp800m).
 
 Entonces tome la decisión de pasar todo el render a el componente `GridList.js` para poder hacer uso del deploy, de cualquier manera en el codigo deje el componente de `GridCards.js`
 
-para ver si ustedes podian darme algun feedback sobre este error para en algun futuro poder solucionarlo.
+Para ver si ustedes podian darme algun feedback sobre este error para en algun futuro poder solucionarlo.
 
-Siguiendo con el deploy preferi en primera instacia usar `Heroku` para el deploy porque era una herramienta que conocia para los deploy, pero luego de hacer el deploy exitoso la aplicación hizo un 
+Siguiendo con el deploy preferí en primera instacia usar `Heroku` para el deploy porque era una herramienta que conocia para los deploy, pero luego de hacer el deploy exitoso la aplicación hizo un 
 
-crash y empeze a buscar distintas alternativas hasta que llegue a `Vercel`.
+Crash y empeze a buscar distintas alternativas hasta que llegue a `Vercel`.
 
 En las vistas puse los buscadores por nombre e ID del pokemon junto a la paginación, ya que si la paginación se encontraba al final de la lista de `Cards`, el usuario podia tener problemas a quizas
 
-no encontrar la paginación ya que esta abajo, asi teniendolo al principio el usuario ya sabe que las `Cards` estan paginadas. Tambien es para que en un futuro caso si se quisieran mostrar
+No encontrar la paginación ya que esta abajo, asi teniendolo al principio el usuario ya sabe que las `Cards` estan paginadas. Tambien es para que en un futuro caso si se quisieran mostrar
 
-mas de 20 pokemons, el usuario no tenga que bajar al final para cambiar de pagina.
+Mas de 20 pokemons, el usuario no tenga que bajar al final para cambiar de pagina.
 
 En las cartas decidí mostrar tanto el tipo de pokemon es, mas sus estadisticas base para cada uno de ellos.
 
