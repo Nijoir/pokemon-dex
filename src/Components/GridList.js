@@ -25,14 +25,14 @@ function GridList({ loading,pokemons,page,setPage,totalPages }) {
          : <>
             { pokemons.map((pokemon) => {
                 return (
-                    <Grid key={id} item xs={6}>
+                    <Grid key={pokemon.id} item xs={6}>
                     <Item>
                         <a>Nro: </a>
                         <span>{`${pokemon.id}`}</span>
                         <Divider></Divider>
                         <Grid >
-                            <h2>{name}</h2>
-                            <img alt={name} src={pokemon.sprites.front_default}></img>
+                            <h2>{pokemon.name}</h2>
+                            <img alt={pokemon.name} src={pokemon.sprites.front_default}></img>
                         </Grid>
                         <Grid >
                             <a>Type:</a>
