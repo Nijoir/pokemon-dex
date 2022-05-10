@@ -14,12 +14,14 @@ export default function GridList({ loading,pokemons,page,setPage,totalPages }) {
 
     return (
         <>
-        <Grid container>
+        <Grid container direction={'column'} justifyContent='center' alignItems={'center'}>
         <Typography>Page: {page}</Typography>
         <Pagination count={totalPages} page={page} onChange={handleChange} />
         </Grid>
         { loading ? 
-            <a>Cargando Pokemones...</a>
+        <>
+            <a>Buscando Pokemones...</a>
+            </>
          : <>
             { pokemons.map((pokemon) => {
                 return (
