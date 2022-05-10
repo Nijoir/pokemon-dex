@@ -1,10 +1,10 @@
-async function getPokemons() {
-    const apiURL = 'https://pokeapi.co/api/v2/pokemon?limit=20&offset=0';
-
+async function getPokemons(limit , offset ) {
+    
+    const apiURL = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`
     return fetch(apiURL)
         .then(res => res.json())
         .then(response => {
-           return response.results
+           return response
         })
 };
 
@@ -15,7 +15,7 @@ async function obtainPokemonsData(urlData) {
         .then(response => {
             return response
         })
-        
+
 }
 
 export {
