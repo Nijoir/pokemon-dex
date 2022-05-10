@@ -39,32 +39,34 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Learn More About The Proyect
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Hola aca estara un poco de las decisiones técnicas para el desarrollo de la aplicación
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Bueno comenzando por usar el MUI para ya tener componentes preparados para su implementacion y no estar haciendo uso de demasiado css para los estilos.
 
-### Code Splitting
+Decidí ir dividiendo los componentes para poder tener un orden entorno a todo lo renderizado, pero al momento de hacer el deploy de la aplicación sucedia un error, este error era que no
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+obtenia el `modulo` de GridCards.js, siendo que ya esta importado. Dejo la [Imágen](https://prnt.sc/0xmpphvp800m).
 
-### Analyzing the Bundle Size
+Entonces tome la decisión de pasar todo el render a el componente `GridList.js` para poder hacer uso del deploy, de cualquier manera en el codigo deje el componente de `GridCards.js`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+para ver si ustedes podian darme algun feedback sobre este error para en algun futuro poder solucionarlo.
 
-### Making a Progressive Web App
+Siguiendo con el deploy preferi en primera instacia usar `Heroku` para el deploy porque era una herramienta que conocia para los deploy, pero luego de hacer el deploy exitoso la aplicación hizo un 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+crash y empeze a buscar distintas alternativas hasta que llegue a `Vercel`.
 
-### Advanced Configuration
+En las vistas puse los buscadores por nombre e ID del pokemon junto a la paginación, ya que si la paginación se encontraba al final de la lista de `Cards`, el usuario podia tener problemas a quizas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+no encontrar la paginación ya que esta abajo, asi teniendolo al principio el usuario ya sabe que las `Cards` estan paginadas. Tambien es para que en un futuro caso si se quisieran mostrar
 
-### Deployment
+mas de 20 pokemons, el usuario no tenga que bajar al final para cambiar de pagina.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+En las cartas decidí mostrar tanto el tipo de pokemon es, mas sus estadisticas base para cada uno de ellos.
 
-### `npm run build` fails to minify
+**Cosas que se puedan mejorar en siguientes iteraciones
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1) Que al momento de bajar al final de la lista tenga un boton para poder volver al principio de la pagina, para que el usuario no tenga que subir por el.
+2) Agregar unos filtros sobre los tipos de pokemon para tener un buscador para posibles armados de equipos de pokemon.
+3) Agregar una 2da capa a las cartas para mostrar movimientos o descripción de cada pokemon.
