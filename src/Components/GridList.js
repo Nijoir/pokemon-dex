@@ -1,11 +1,11 @@
 import React from "react";
 
-import GridCards from '../Components/GridCards';
+import GridCards from './GridCards';
 import { Grid, Pagination, Typography } from "@mui/material";
 
 
 
-export default function GridList({ loading,pokemons,page,setPage,totalPages }) {
+function GridList({ loading,pokemons,page,setPage,totalPages }) {
 
 
     const handleChange = (e,page) => {
@@ -36,3 +36,5 @@ export default function GridList({ loading,pokemons,page,setPage,totalPages }) {
         </>
     )
 }
+
+export default GridList

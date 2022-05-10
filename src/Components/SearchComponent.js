@@ -6,7 +6,7 @@ import { Box,
         } from "@mui/material";
 
 
-export default function SearchComponent({onSearch}) {
+function SearchComponent({onSearch}) {
     const [searchName, setSearchName] = useState('')
     const [searchId, setSearchId] = useState('')
 
@@ -64,3 +64,5 @@ export default function SearchComponent({onSearch}) {
             </Box>
     )
 }
+
+export default SearchComponent

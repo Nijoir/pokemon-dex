@@ -15,7 +15,7 @@ const Item = styled(Paper)(({ theme }) => ({
   }));
   
 
-export default function GridCards({ pokemon, id}) {
+function GridCards({ pokemon, id}) {
     const name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1).toLowerCase()
 
     
@@ -51,3 +51,5 @@ export default function GridCards({ pokemon, id}) {
         </Grid>
     )
 }
+
+export default GridCards
