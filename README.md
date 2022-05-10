@@ -41,7 +41,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ## Learn More About The Proyect
 
-**Hola aca estara un poco de las decisiones técnicas para el desarrollo de la aplicación
+**Hola aca estara un poco de las decisiones técnicas para el desarrollo de la aplicación**
 
 Bueno comenzando por usar el MUI para ya tener componentes preparados para su implementacion y no estar haciendo uso de demasiado css para los estilos.
 
@@ -65,7 +65,7 @@ mas de 20 pokemons, el usuario no tenga que bajar al final para cambiar de pagin
 
 En las cartas decidí mostrar tanto el tipo de pokemon es, mas sus estadisticas base para cada uno de ellos.
 
-**Cosas que se puedan mejorar en siguientes iteraciones
+**Cosas que se puedan mejorar en siguientes iteraciones**
 
 1) Que al momento de bajar al final de la lista tenga un boton para poder volver al principio de la pagina, para que el usuario no tenga que subir por el.
 2) Agregar unos filtros sobre los tipos de pokemon para tener un buscador para posibles armados de equipos de pokemon.
